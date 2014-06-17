@@ -157,6 +157,7 @@ def image_and_tag_arg
 end
 
 def image_id_matches?(id)
+  return false if new_resource.id.nil?
   id.start_with?(new_resource.id)
 end
 
