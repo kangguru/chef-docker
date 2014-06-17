@@ -143,6 +143,7 @@ def container_command_matches_if_exists?(command)
 end
 
 def container_id_matches?(id)
+  return false if new_resource.id.nil?
   id.start_with?(new_resource.id)
 end
 
